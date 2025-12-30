@@ -1,16 +1,55 @@
-# github_pr_viewer
+ # Flutter GitHub Pull Request Viewer
+A simple Flutter application that fetches and displays pull requests from the
+`flutter/flutter` GitHub repository.  
+The app demonstrates clean folder structure with MVC pattren, state management with Riverpod,
+secure token handling, theming, and basic animations.
 
-A new Flutter project.
 
-## Getting Started
+## Project Structure and Setup Steps
+### Folder Structure
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```text
+.
+├── core
+│   ├── secure_storage
+│   │   ├── secure_storage_service.dart
+│   │   └── ss_service_implementation.dart
+│   ├── shared_prefs.dart
+│   └── singletons
+│       └── network_handler.dart
+├── features
+│   ├── auth
+│   │   ├── controller
+│   │   │   ├── auth_notifier.dart
+│   │   │   └── auth_states.dart
+│   │   └── views
+│   │       └── login_screen.dart
+│   └── pr_viewer
+│       ├── controller
+│       │   ├── pullrequest_notifier.dart
+│       │   └── pullrequest_states.dart
+│       ├── models
+│       │   └── pullrequest_data_model.dart
+│       ├── views
+│       │   ├── home_screen.dart
+│       │   └── settings_screen.dart
+│       └── widgets
+│           └── pullrequires_card_tile.dart
+├── folder_structure.txt
+├── main.dart
+├── providers
+│   └── app_provider.dart
+├── repository
+│   ├── api_call.dart
+│   └── network_urls.dart
+├── routes
+│   └── app_routes_starter.dart
+├── themes
+│   └── theme_notifier.dart
+└── utils
+    ├── adaptive_ui
+    │   └── adeptive_ui.dart
+    ├── common
+    │   └── shimmer_loading.dart
+    └── constants
+        └── constant_strings.dart
