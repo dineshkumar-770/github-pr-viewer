@@ -105,3 +105,12 @@ These are essential features that an app must have, So I have added these.
 - Handle both portrait and landscape orientation.
 - State persistence.
 
+## Demo Video
+
+<p align="left">
+  <a href="https://drive.google.com/file/d/1ZjiJGiAzMGeynV575hx9oYYShyLfVanA/view?usp=sharing" target="_blank">
+    ▶️ <strong>Watch Demo Video</strong>
+  </a>
+</p>
+
+
