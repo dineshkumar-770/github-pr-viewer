@@ -89,6 +89,17 @@ authentication tokens.
 - Adaptive layout (as Responsiveness is for web part and adaptive is for mobile platforms).
 These are essential features that an app must have, So I have added these.
 
+## 🐞 Known Issues / Limitations
+
+- GitHub API rate limiting applies when requests are unauthenticated.
+- Finite scrolling pagination is not implemented, if a repo has 100+ PRs then it required.
+- The application is optimized for mobile devices only and not considring the web application.
+- No offline data caching is implemented for pull request data.
+- Accessibility support (TalkBack / VoiceOver) has not been implemented.
+  The primary focus of this assignment was on application architecture,
+  state management, and secure data handling, although 
+  accessibility feature can be added with semantic labels.
+
 ## Surprise Features
 - Markdown widget for better views and understanding of body of a pull request.
 - Handle both portrait and landscape orientation.
