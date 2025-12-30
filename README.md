@@ -81,3 +81,16 @@ authentication tokens.
 - In a production-grade setup, sensitive secrets should always be
   handled on a backend server and not stored in the client app
 
+## Bonus Features
+- Dark Mode.
+- Animations and Shimmer Loading.
+- Pull to refresh.
+- Retry on failure.
+- Adaptive layout (as Responsiveness is for web part and adaptive is for mobile platforms).
+These are essential features that an app must have, So I have added these.
+
+## Surprise Features
+- Markdown widget for better views and understanding of body of a pull request.
+- Handle both portrait and landscape orientation.
+- State persistence.
+
