@@ -108,8 +108,8 @@ These are essential features that an app must have, So I have added these.
 ## Demo Video
 
 <p align="left">
-  <a href="https://drive.google.com/file/d/1ZjiJGiAzMGeynV575hx9oYYShyLfVanA/view?usp=sharing" target="_blank">
-    ▶️ <strong>Watch Demo Video</strong>
+  <a href="https://drive.google.com/file/d/17xhpmz7QXCDmeN6HkNSAma591bav1G8Y/view?usp=sharing" target="_blank">
+     <strong>Watch Demo Video</strong>
   </a>
 </p>
 
