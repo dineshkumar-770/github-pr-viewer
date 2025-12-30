@@ -53,3 +53,31 @@ secure token handling, theming, and basic animations.
     │   └── shimmer_loading.dart
     └── constants
         └── constant_strings.dart
+```
+
+## Token Handeling
+The application follows a secure and state-driven approach for handling
+authentication tokens.
+
+- Authentication tokens are stored using `flutter_secure_storage` .
+- On Android, the storage is backed by **Android Keystore** with encrypted
+  shared preferences.
+- Tokens are **never hardcoded** inside the application, but for demo purpose I take a hardcoded string to assume it as a token.
+- Token read/write operations are abstracted behind a secure storage service
+  and injected using Riverpod dependency injection.
+
+### Token Lifecycle follows as
+- When user first gets authenticated and received the token.
+- This token will be stored securely using `flutter_secure_storage`.
+- And when user restarts or cold start the app, that token will be readed from the secure storage and then
+  authenticates the user.
+- If token exist then user moves to the home screen else to the login screen. The state is persisted.
+
+### Security Notes
+
+- Obfuscation is used only to make reverse engineering harder and
+  does not guarantee security
+- Client-side applications are considered untrusted environments
+- In a production-grade setup, sensitive secrets should always be
+  handled on a backend server and not stored in the client app
+
