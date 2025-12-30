@@ -91,10 +91,10 @@ class HomeScreen extends StatelessWidget {
           ),
           Consumer(
             builder: (context, ref02, child) {
-              final token = ref02.read(pullRequestNotifierProvider.notifier).checkForUserToken();
+              final tokenState = ref02.watch(authNotifierProvider);
               final themeMode = ref02.watch(themeProvider);
               final isDark = themeMode == ThemeMode.dark;
-              if (token.isNotEmpty) {
+              if (tokenState.authToken != null && tokenState.authToken!.isNotEmpty) {
                 return Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8.0.adptW, vertical: 8.0.adptH),
                   child: Container(
@@ -103,7 +103,7 @@ class HomeScreen extends StatelessWidget {
                       border: Border.all(width: 1, color: isDark ? Colors.white : Colors.black),
                       borderRadius: BorderRadius.circular(4.0.adptSP),
                     ),
-                    child: Center(child: Text(token)),
+                    child: Center(child: Text(tokenState.authToken ?? "")),
                   ),
                 );
               } else {

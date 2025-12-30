@@ -44,10 +44,7 @@ class LoginScreen extends StatelessWidget {
                   builder: (context, ref, _) {
                     final authState = ref.watch(authNotifierProvider);
                     return OutlinedButton.icon(
-                      onPressed: () async {
-                        // await Prefs.setString(ConstantStrings.tokenKey, ;
-                        // await Future.delayed(const Duration(seconds: 5));
-
+                      onPressed: () async { 
                         await ref.read(authNotifierProvider.notifier).saveToken(authState.authToken ?? "");
 
                         if (authState.isAuthenticated) {
